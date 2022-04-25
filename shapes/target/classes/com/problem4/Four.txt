@@ -1,0 +1,22 @@
+What do you mean by IOC?
+	IOC are like containers where the bean class is registered and all the details are provided i.e either to inject via constructors or 
+	using Setter and other such things.
+	
+What are Spring Beans?
+	Spring beans are those classes registered in the container and their objects are directly injected
+	
+Whare are bean scopes available?
+	SingleTon Scope	 --> Here, only single object is injected no matter how many times use!
+	Proptotype Scope --> Here, only one id is registered in container but still evetytime, it will give new objects.
+	
+
+Autowiring>
+	Autowiring is basically injecting straight away without using setter methods or constructors. There are three type
+			1) by name
+				It checks for exact name of variable reference and id in container and if it matches, it injects straight away
+			2) by type
+				It checks whether any type of the class registered in container, if it is present, it injects straightaway.
+				But, if there are multiple objects of same type present, then ambiguity arises
+			3) by constructor
+				It first checks for name, if not possible then it will go for by type!
+	Limitation for autowiring is mostly the ambiguity problem.
